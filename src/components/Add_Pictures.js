@@ -16,11 +16,11 @@ class Add_Pictures extends Component {
     
     render() {
         return (
-            <form
+            <form 
                 onSubmit={e => {
                     e.preventDefault()
                     axios
-                    .post("api/pictures", {
+                    .post("/api/pictures", {
                         name: this.state.name,
                         image: this.state.image
                     })

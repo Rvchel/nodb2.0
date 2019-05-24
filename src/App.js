@@ -1,5 +1,6 @@
 import Add_Pictures from './components/Add_Pictures';
 import Pictures from './components/Pictures';
+import Picture_Display from './components/Picture_Display';
 
 import React, {Component} from 'react';
 import './App.css';
@@ -21,24 +22,20 @@ class App extends Component {
   render() {
   return (
     <main className='Pictures'>
-   
-   {/* <button>Camera</button>
-   <button>Plus</button> */}
-
-   
-   {/* <Add_Pictures /> */}
     
-
     <nav>
       <button className={this.state.view === "pictures" ? "current" : ""}
       onClick={() => this.setState({view: "pictures"})}>Pictures</button>
       <button className={this.state.view === "add" ? "current" : ""}
       onClick={() => this.setState({view: "add"})}>Plus</button>
-      {/* <button onClick={() => this.setState({view: "pictures"})}>Pics</button> */}
+      {/* <button onClick={() => this.setState({view: "home"})}>Home</button> */}
+      <button className={this.state.view === "home" ? "current" : ""}
+      onClick={() => this.setState({view: "home"})}>pic display</button>
     </nav>
     {this.state.view === "pictures" ? (
       <Pictures />
     ) : (
+      // eslint-disable-next-line 
       <Add_Pictures changeView={this.changeView} />
     )}
 

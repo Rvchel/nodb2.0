@@ -8,7 +8,7 @@ class Pictures extends Component {
         this.state = {
             pictures: [],
             loading: true,
-            error: "",
+            error: ""
         }
         this.updatePictures = this.updatePictures.bind(this)
     }
@@ -20,7 +20,7 @@ class Pictures extends Component {
         })
         .catch(error => {
             console.log(error)
-            // this.setState({loading: false, error: "An error has occurred"})
+            this.setState({loading: false, error: "No Coffee"})
         })
     }
 
@@ -30,9 +30,12 @@ class Pictures extends Component {
 
 
     render () {
+        // console.log(this.state.pictures)
+        // const {wishes} = this.state
+       
         return (
             <section>
-                {this.state.loading ? <p>Loading...</p> : null}
+                {this.state.loading ? <p>Loading</p> : null}
                 {this.state.error}
                 {this.state.pictures.map((picture, index) => (
                     <Picture key={index} picture={picture} updatePictures={this.updatePictures} />
