@@ -1,26 +1,50 @@
-import React from 'react';
-import logo from './logo.svg';
+import Add_Pictures from './components/Add_Pictures';
+import Pictures from './components/Pictures';
+
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
+class App extends Component { 
+  constructor() {
+    super();
+    this.state = {
+      view: "pictures",
+      // isEmptyStatement: true,
+      // addPicture: [],
+    }
+    this.changeView = this.changeView.bind(this)
+  }
+  changeView(newView) {
+    this.setState({view: newView})
+  }
+
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <main className='Pictures'>
+   
+   {/* <button>Camera</button>
+   <button>Plus</button> */}
+
+   
+   {/* <Add_Pictures /> */}
+    
+
+    <nav>
+      <button className={this.state.view === "pictures" ? "current" : ""}
+      onClick={() => this.setState({view: "pictures"})}>Pictures</button>
+      <button className={this.state.view === "add" ? "current" : ""}
+      onClick={() => this.setState({view: "add"})}>Plus</button>
+      {/* <button onClick={() => this.setState({view: "pictures"})}>Pics</button> */}
+    </nav>
+    {this.state.view === "pictures" ? (
+      <Pictures />
+    ) : (
+      <Add_Pictures changeView={this.changeView} />
+    )}
+
+    </main>
+   );
+  }
 }
 
 export default App;
