@@ -16,7 +16,7 @@ class Add_Pictures extends Component {
     
     render() {
         return (
-            <form 
+            <form id="Input_Submit"
                 onSubmit={e => {
                     e.preventDefault()
                     axios
@@ -32,9 +32,9 @@ class Add_Pictures extends Component {
                     })
                 }}
                 >
-                <input name="name" onChange={this.handleChange} placeholder="Name" />
-                <input name="image" onChange={this.handleChange} placeholder="Image"/>
-                <button type="submit">Submit</button>
+                <input id="Name_Input" name="name" onChange={this.handleChange} placeholder="Name" />
+                <input id="Image_Input" name="image" onChange={this.handleChange} placeholder="Image"/>
+                <button id="Submit_Button" type="submit">Submit</button>
             </form>
         )
     }

@@ -3,6 +3,10 @@ const pictures = [{
     image: "https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
     //type
     //description
+},
+{
+    name: "Pouring Cafe",
+    image: "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
 }]
 const getPictures = (req, res) =>  {
     res.json(pictures)

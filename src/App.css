@@ -1,3 +1,77 @@
 body {
   background-color: #272b34;
 }
+.Buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  
+}
+#Pictures_Button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+}
+#Add_Button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+}
+#Submit_Button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+}
+#Name_Input {
+  background-color: transparent;
+  width: 300px;
+  font-size: 70px;
+}
+#Image_Input {
+  background-color: transparent;
+  width: 300px;
+  font-size: 70px;
+  
+}
+#Input_Submit {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 400px;
+  margin-top: 300px;
+}
+img {
+  background-color: aquamarine;
+  width: auto;
+  max-width: 400px;
+  height: auto;
+  max-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-left: 500px
+}
+#Delete_Button {
+  color:white;
+  background-color: transparent;
+  width: 300px;
+  font-size: 20px;
+  border: none;
+  margin-left: 490px;
+  display: flex;
+}
+#Input_Button {
+  margin-left: 500px;
+  padding-bottom: 10px;
+}
+#Des_Input {
+  background-color: transparent;
+}
+#Edit_Button {
+  color: white;
+  background-color: transparent;
+  border: none;
+}
