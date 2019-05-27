@@ -18,10 +18,10 @@ function Picture(props) {
     <section>
          <h3>{props.name}</h3>
 
-         <div id="counter">{props.count}</div>
+         <div id="counter">{props.picture.like}</div>
          <button id="Like_Button" 
              onClick={() => {
-             axios.put("/api/pictures/:name" + props.increase).then(response => {
+             axios.put("/api/pictures/" + props.picture.id ).then(response => {
                  props.updatePictures(response.data)
              })
              .catch(error => {
@@ -33,7 +33,7 @@ function Picture(props) {
          
          <button id="Delete_Button"
              onClick={() => {
-             axios.delete("/api/pictures/:name" + props.picture.name).then(response => {
+             axios.delete("/api/pictures/" + props.picture.name).then(response => {
              props.updatePictures(response.data)
          })
              .catch(error => {

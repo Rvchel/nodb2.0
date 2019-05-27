@@ -1,7 +1,6 @@
 import Add_Pictures from './components/Add_Pictures';
 import Pictures from './components/Pictures';
 import Picture_Display from './components/Picture_Display';
-import Picture_Home from './components/Picture_Home';
 import React, {Component} from 'react';
 import './App.css';
 import Picture from './components/Picture';
@@ -25,10 +24,10 @@ class App extends Component {
     
     <main className='Picture_Container'>
 
-    <nav className="Buttons">
+    <nav id="container2" className="Buttons">
     {/* <section id="title">La Cafe</section> */}
       <button id="Pictures_Button" className={this.state.view === "pictures" ? "current" : ""}
-      onClick={() => this.setState({view: "pictures"})}>Gallary</button>
+      onClick={() => this.setState({view: "pictures"})}>Inspiration</button>
       <button id="Add_Button" className={this.state.view === "add" ? "current" : ""}
       onClick={() => this.setState({view: "add"})}>+</button>
     </nav>

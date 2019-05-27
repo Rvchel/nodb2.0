@@ -2,7 +2,10 @@ import React from 'react';
 
 function Picture_Display() {
     return (
-        <h1 id="Title">La Galleria</h1>
+        <div id="container">
+        <p id="Title">Create & Inspire</p>
+        <img id="logo" src={require("./mountain.svg")} />
+        </div>
     )
 }
 

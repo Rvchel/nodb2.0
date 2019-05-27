@@ -10,12 +10,14 @@ class Pictures extends Component {
             pictures: [],
             loading: true,
             error: "",
+            // posts: [],
         }
         this.updatePictures = this.updatePictures.bind(this)
         this.increase = this.increase.bind(this)
     }
     increase() {
         this.setState({count: this.state.count +1})
+    
         console.log(this.state.count)
     }
     componentDidMount() {
@@ -36,7 +38,7 @@ class Pictures extends Component {
 
 
     render () {
-        // console.log(this.state.pictures)
+        console.log(this.state.count)
         const {pictures} = this.state
         const {error} = this.state
         const {loading} = this.state
