@@ -11,41 +11,34 @@ class App extends Component {
     super();
     this.state = {
       view: "pictures",
-      // isEmptyState: true,
-      // addPicture: [],
     }
     this.changeView = this.changeView.bind(this)
   }
-  // triggerHome = () => {
-  //   this.setState({
-  //     ...this.state,
-  //     isEmptyState: false,
-  //     isHomeState: true
-  //   })
-  // }
 
   changeView(newView) {
     this.setState({view: newView})
   }
 
   render() {
-  return (
+   
+    return (
+    
     <main className='Picture_Container'>
 
     <nav className="Buttons">
+    {/* <section id="title">La Cafe</section> */}
       <button id="Pictures_Button" className={this.state.view === "pictures" ? "current" : ""}
-      onClick={() => this.setState({view: "pictures"})}>Cafe</button>
+      onClick={() => this.setState({view: "pictures"})}>Gallary</button>
       <button id="Add_Button" className={this.state.view === "add" ? "current" : ""}
       onClick={() => this.setState({view: "add"})}>+</button>
-      {/* <button onClick={<Picture_Display />}>Home</button> */}
-      {/* <button className={this.state.isEmptyState === "home" ? "current" : ""}
-      onClick={() => this.setState({isEmptyState: "home"})}>home</button> */}
     </nav>
+
     {this.state.view === "pictures" ? (
       <Pictures />
     ) : ( 
       <Add_Pictures changeView={this.changeView} />
     )}
+    <Picture_Display />
 
     </main>
    );

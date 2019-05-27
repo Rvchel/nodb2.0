@@ -1,58 +1,85 @@
+@import URL("https://fonts.googleapis.com/css?family=Cinzel&display=swap");
+
 body {
   background-color: #272b34;
+  margin: 0;
+  padding: 0;
+}
+#title {
+  margin: 0;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-left: 500px;
 }
 .Buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
+  border-right: solid 1px white;
+  width: 20vw;
+  height: 100vh;
+  margin-bottom: 200px
   
 }
 #Pictures_Button {
-  color: white;
+  color: rgb(97, 96, 96);
   background-color: transparent;
   border: none;
-  font-size: 70px;
+  font-size: 50px;
+  font-family: 'Cinzel', serif;
+  outline: none;
 }
 #Add_Button {
-  color: white;
+  color: rgb(97, 96, 96);
   background-color: transparent;
   border: none;
   font-size: 70px;
+  font-family: 'Cinzel', serif;
+  outline: none;
 }
 #Submit_Button {
-  color: white;
+  color: rgb(97, 96, 96);
   background-color: transparent;
   border: none;
-  font-size: 70px;
+  font-size: 30px;
+  font-family: 'Cinzel', serif;
+  outline: none;
 }
 #Name_Input {
   background-color: transparent;
   width: 300px;
-  font-size: 70px;
+  font-size: 30px;
+  font-family: 'Cinzel', serif;
+  border: solid 1px #323235;
+  outline: none;
 }
 #Image_Input {
   background-color: transparent;
   width: 300px;
-  font-size: 70px;
+  font-size: 30px;
+  font-family: 'Cinzel', serif;
+  border: solid 1px #323235;
+  outline: none;
   
 }
 #Input_Submit {
   display: flex;
   flex-direction: row-reverse;
-  margin-right: 400px;
-  margin-top: 300px;
+  margin-right: 300px;
+  margin-top: -700px;
 }
 img {
-  background-color: aquamarine;
-  width: auto;
   max-width: 400px;
-  height: auto;
   max-height: 400px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
-  margin-left: 500px
+  margin-left: 500px;
+  border: solid 1px white;
+  margin-top: 20px;
+  padding: 0;
 }
 #Delete_Button {
   color:white;
@@ -62,16 +89,58 @@ img {
   border: none;
   margin-left: 490px;
   display: flex;
+  font-family: 'Cinzel', serif;
+  outline: none;
 }
 #Input_Button {
   margin-left: 500px;
   padding-bottom: 10px;
+  font-family: 'Cinzel', serif;
+  outline: none;
 }
 #Des_Input {
   background-color: transparent;
+  font-family: 'Cinzel', serif;
+  border: solid 1px #323235;
+  outline: none;
 }
 #Edit_Button {
-  color: white;
+  color: rgb(97, 96, 96);
   background-color: transparent;
   border: none;
+  font-family: 'Cinzel', serif;
+  outline: none;
+  
+}
+#Like_Button {
+  color:white;
+  background-color: transparent;
+  width: 300px;
+  font-size: 20px;
+  border: none;
+  margin-left: 490px;
+  display: flex;
+  font-family: 'Cinzel', serif;
+  outline: none;
+}
+#counter {
+  color:white;
+  background-color: transparent;
+  width: 300px;
+  font-size: 20px;
+  border: none;
+  margin-left: 490px;
+  display: flex;
+  font-family: 'Cinzel', serif;
+  outline: none;
+}
+#Title {
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: -1850px;
+  font-family: 'Cinzel', serif;
+  color: rgb(97, 96, 96);
+  font-size: 15vh;
+  margin-left: 200px;
 }

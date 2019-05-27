@@ -15,14 +15,16 @@ class Add_Pictures extends Component {
     }
     
     render() {
+        const {name} = this.state
+        const {image} = this.state
         return (
             <form id="Input_Submit"
                 onSubmit={e => {
                     e.preventDefault()
                     axios
                     .post("/api/pictures", {
-                        name: this.state.name,
-                        image: this.state.image
+                        name: name,
+                        image: image
                     })
                     .then(response => {
                         this.props.changeView("pictures")
