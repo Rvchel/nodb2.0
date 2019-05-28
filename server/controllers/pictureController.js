@@ -17,7 +17,9 @@ const pictures = [{
     image: "https://images.pexels.com/photos/877695/pexels-photo-877695.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     like: 0,
     id: 3
-}]
+},
+]
+
 let id = 4
 
 const getPictures = (req, res) =>  {
